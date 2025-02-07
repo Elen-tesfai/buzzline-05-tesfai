@@ -1,0 +1,3 @@
+{"message": "I just saw a movie! It was boring.", "author": "Bob", "timestamp": "2025-02-06 19:50:14", "category": "entertainment", "sentiment": 0.21, "keyword_mentioned": "movie", "message_length": 34}
+{"message": "I just tried an app! It was funny.", "author": "Alice", "timestamp": "2025-02-06 19:50:19", "category": "other", "sentiment": 0.76, "keyword_mentioned": "other", "message_length": 34}
+{"message": "I just saw a story! It was boring.", "author": "Eve", "timestamp": "2025-02-06 19:50:24", "category": "other", "sentiment": 0.17, "keyword_mentioned": "other", "message_length": 34}

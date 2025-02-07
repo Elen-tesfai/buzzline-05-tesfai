@@ -105,17 +105,30 @@ six
 # DATABASE INTEGRATION 
 # ======================================================
 
-# sqlite3 is part of Python Std Lib - no need to install it 
-# Other popular tools include the following.
-
-# SQLAlchemy - SQL toolkit and Object-Relational Mapping (ORM) library
-# Uncomment the line below to install SQLAlchemy.
-# SQLAlchemy
+# sqlite3 is part of Python Standard Library - no need to install it
+# SQLAlchemy - SQL toolkit and ORM library
+SQLAlchemy
 
 # psycopg2 - PostgreSQL database adapter for Python
-# Uncomment the line below to install psycopg2.
-# psycopg2
+psycopg2
 
 # PyMySQL - MySQL client library
-# Uncomment the line below to install PyMySQL.
-# PyMySQL
+PyMySQL
+
+# ======================================================
+# OPTIONAL VERSIONS - Uncomment if you need specific versions
+# ======================================================
+# SQLAlchemy==2.0.18
+# psycopg2==2.9.3
+# PyMySQL==1.0.2
+
+# ======================================================
+# GUI for Non-Windows Platforms (optional)
+# ======================================================
+# Add PyQt6 for non-Windows platforms
+PyQt6; sys_platform != "win32"
+
+# ======================================================
+# NOTE:
+# Run `pip install -r requirements.txt` to install the packages in this file.
+# ======================================================
