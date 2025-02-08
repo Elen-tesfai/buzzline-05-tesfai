@@ -78,24 +78,23 @@
 # ======================================================
 
 # Up-to-date package management tools
-pip==23.0.1
-setuptools==65.5.0
-wheel==0.38.4
+pip
+setuptools
+wheel
 
 # Easy logging for monitoring code execution
-loguru==0.6.0
+loguru
 
 # Environment variables management
-python-dotenv==0.21.0
+python-dotenv
 
 # ======================================================
 # KAFKA MESSAGE BROKER INTEGRATION
 # ======================================================
 
 # Apache Kafka Python client (six was removed so add it separately)
-kafka-python
-PyQt6; sys_platform != "win32"
-six==1.16.0
+six
+kafka-python-ng
 
 # Alternative: pin the older version.
 # If you want to use the older version of kafka-python,
@@ -106,17 +105,30 @@ six==1.16.0
 # DATABASE INTEGRATION 
 # ======================================================
 
-# sqlite3 is part of Python Std Lib - no need to install it 
-# Other popular tools include the following.
-
-# SQLAlchemy - SQL toolkit and Object-Relational Mapping (ORM) library
-# Uncomment the line below to install SQLAlchemy.
-SQLAlchemy==1.4.32
+# sqlite3 is part of Python Standard Library - no need to install it
+# SQLAlchemy - SQL toolkit and ORM library
+SQLAlchemy
 
 # psycopg2 - PostgreSQL database adapter for Python
-# Uncomment the line below to install psycopg2.
-# psycopg2==2.9.3
+psycopg2
 
 # PyMySQL - MySQL client library
-# Uncomment the line below to install PyMySQL.
+PyMySQL
+
+# ======================================================
+# OPTIONAL VERSIONS - Uncomment if you need specific versions
+# ======================================================
+# SQLAlchemy==2.0.18
+# psycopg2==2.9.3
 # PyMySQL==1.0.2
+
+# ======================================================
+# GUI for Non-Windows Platforms (optional)
+# ======================================================
+# Add PyQt6 for non-Windows platforms
+PyQt6; sys_platform != "win32"
+
+# ======================================================
+# NOTE:
+# Run `pip install -r requirements.txt` to install the packages in this file.
+# ======================================================
