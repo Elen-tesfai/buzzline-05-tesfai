@@ -1,3 +1,8 @@
+"""
+producer_tesfai.py
+This script generates a stream of JSON messages simulating producer messages and writes them to a JSON file.
+"""
+
 import json
 import random
 import time

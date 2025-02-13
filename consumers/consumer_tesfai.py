@@ -1,3 +1,9 @@
+"""
+consumer_tesfai.py
+This script simulates a Kafka consumer, processes messages, stores them in a SQLite database,
+and visualizes the sentiment of messages over time.
+"""
+
 import pathlib
 import sqlite3
 import random
@@ -6,13 +12,12 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
+from kafka import KafkaConsumer  # Added KafkaConsumer import
 from utils.utils_logger import logger  # Assuming the logger is already set up
-
 
 def assess_sentiment(text: str) -> float:
     """Stub for sentiment analysis."""
     return round(random.uniform(0, 1), 2)
-
 
 def insert_message(message: dict, db_path: pathlib.Path) -> None:
     """Insert a processed message into the SQLite database."""
@@ -40,7 +45,6 @@ def insert_message(message: dict, db_path: pathlib.Path) -> None:
     except Exception as e:
         logger.error(f"Failed to insert message into the database: {e}")
 
-
 def fetch_data_from_db(db_path: pathlib.Path) -> list:
     """Fetch the processed messages from the SQLite database."""
     try:
@@ -53,7 +57,6 @@ def fetch_data_from_db(db_path: pathlib.Path) -> list:
     except Exception as e:
         logger.error(f"Error fetching data from the database: {e}")
         return []
-
 
 def visualize_sentiment(data: list) -> None:
     """Visualize the sentiment of messages by category and show sentiment distribution."""
@@ -117,7 +120,6 @@ def visualize_sentiment(data: list) -> None:
     # Show the plots
     plt.show()
 
-
 def main():
     # Path to your SQLite database
     db_path = pathlib.Path('C:/Users/su_te/buzzline-05-tesfai/data/buzz.sqlite')
@@ -144,7 +146,6 @@ def main():
 
     # Visualize the sentiment data
     visualize_sentiment(data)
-
 
 if __name__ == "__main__":
     main()
